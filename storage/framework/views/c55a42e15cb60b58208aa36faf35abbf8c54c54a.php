@@ -206,7 +206,27 @@
          
             </ul>
           </li>
-                
+               
+
+                   <li class="nav-item">
+            <a href="#" class="nav-link">
+              <i class="nav-icon fas fa-eye"></i>
+              <p>
+                Trainee
+                <i class="right fas fa-angle-left"></i>
+              </p>
+            </a>
+            <ul class="nav nav-treeview">
+              <li class="nav-item">
+                <a href="/trainee" class="nav-link">
+                  <i class="far fa-circle nav-icon"></i>
+                  <p>Trainee</p>
+                </a>
+              </li>       
+                  
+
+            </ul>
+          </li 
              </p>
             </a>
           </li>
@@ -269,13 +289,7 @@
                   <p>Trainee</p>
                 </a>
               </li>       
-                 <!--        <li class="nav-item">
-                <a href="/quickLink" class="nav-link">
-                  <i class="far fa-circle nav-icon"></i>
-                  <p>Page Content</p>
-                </a>
-              </li>   -->  
-                        
+                  
 
             </ul>
           </li>
