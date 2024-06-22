@@ -10,7 +10,6 @@
  <link rel="stylesheet" href="../../css/mformf.css">
 
 <!------ Include the above in your HEAD tag ---------->
-
  
     <div class="container">
         <div class="row">
@@ -324,8 +323,9 @@
             </div>
         </div>
     </div>
-    <script type="text/javascript">
-        
+
+    
+    <script type="text/javascript">        
         $(document).ready(function () {
     $('.registration-form fieldset:first-child').fadeIn('slow');
 

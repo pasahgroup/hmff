@@ -178,9 +178,6 @@ $detail = slider::where('id',$id)->first();
   // ->offset(1)
   ->limit(5)->get();
 
-
-//
-
 //dd($scheduledGroupTours);
 
          $place_to_visit = program::join('attachments','programs.id','attachments.destination_id')

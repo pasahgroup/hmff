@@ -36,11 +36,8 @@
     <!-- Main content -->
     <section class="content">
 
-      <!-- Default box -->
-        
       <div class="card">
-        <div class="card-header">
-         
+        <div class="card-header">         
 
           <form method="post" id="post_form" role="form" class="registration-form" action="{{ route('research') }}" enctype="multipart/form-data">
 
