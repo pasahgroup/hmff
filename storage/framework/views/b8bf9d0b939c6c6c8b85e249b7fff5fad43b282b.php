@@ -93,13 +93,14 @@
                   <tr>
                     <th>#</th>
                      <th>ID</th>
+                      <th>Lodge</th>
                     <th>Name</th>
                       <th>Gender</th>
                       <th>Phone</th>
                       <th>No topics</th>
                      <th>Trained topics</th>
                       <th>Photo</th>
-                         <th>Lodge</th>
+                        
                       
                     <th>Session</th>
                     <th>Designation</th>
@@ -111,6 +112,7 @@
                   <tr>
                     <td><?php echo e($data->id); ?></td>
                     <td><?php echo e($data->pin); ?></td>
+                      <td><?php echo e($data->lodge); ?></td>
                     <td><a href="<?php echo e(route('inclusive.show',$data->id)); ?>"><?php echo e($data->first_name); ?> <?php echo e($data->middle_name); ?> <?php echo e($data->last_name); ?><inclusive.show></a></td>
                                   
                     <td><span class="badge"> <?php echo e($data->gender); ?></span></td>
@@ -121,7 +123,7 @@
                   <!--    <td><?php echo e($data->main); ?></td>
                      <td><?php echo e($data->tour_code); ?></td> -->
                       <td><div class="logo mr-auto"><img src="<?php echo e(URL::asset('/storage/trainee/'.$data->photo)); ?>"  style="width:100px; height:80px;"></div></td>
-                       <td><?php echo e($data->lodge); ?></td>
+                     
                    <td><?php echo e($data->session); ?></td>
   <td><?php echo e($data->designation); ?></td>
                     <td>
@@ -154,6 +156,7 @@
                    <tr>
                     <th>#</th>
                      <th>ID</th>
+                      <th>Lodge</th>
                      <th>Name</th>
 
                        <th>Gender</th>
@@ -162,7 +165,7 @@
                      <th>Trained topics</th>
                       
                        <th>Photo</th>
-                     <th>Lodge</th>
+                
                                    
                        <th>Session</th>
                      <th>Designation</th>

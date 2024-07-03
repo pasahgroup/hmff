@@ -94,13 +94,14 @@
                   <tr>
                     <th>#</th>
                      <th>ID</th>
+                      <th>Lodge</th>
                     <th>Name</th>
                       <th>Gender</th>
                       <th>Phone</th>
                       <th>No topics</th>
                      <th>Trained topics</th>
                       <th>Photo</th>
-                         <th>Lodge</th>
+                        
                       
                     <th>Session</th>
                     <th>Designation</th>
@@ -112,6 +113,7 @@
                   <tr>
                     <td>{{ $data->id }}</td>
                     <td>{{ $data->pin }}</td>
+                      <td>{{ $data->lodge }}</td>
                     <td><a href="{{ route('inclusive.show',$data->id) }}">{{ $data->first_name }} {{ $data->middle_name }} {{ $data->last_name }}<inclusive.show></a></td>
                                   
                     <td><span class="badge"> {{ $data->gender }}</span></td>
@@ -122,7 +124,7 @@
                   <!--    <td>{{ $data->main }}</td>
                      <td>{{ $data->tour_code }}</td> -->
                       <td><div class="logo mr-auto"><img src="{{ URL::asset('/storage/trainee/'.$data->photo) }}"  style="width:100px; height:80px;"></div></td>
-                       <td>{{ $data->lodge }}</td>
+                     
                    <td>{{ $data->session }}</td>
   <td>{{ $data->designation }}</td>
                     <td>
@@ -155,6 +157,7 @@
                    <tr>
                     <th>#</th>
                      <th>ID</th>
+                      <th>Lodge</th>
                      <th>Name</th>
 
                        <th>Gender</th>
@@ -163,7 +166,7 @@
                      <th>Trained topics</th>
                       
                        <th>Photo</th>
-                     <th>Lodge</th>
+                
                                    
                        <th>Session</th>
                      <th>Designation</th>
