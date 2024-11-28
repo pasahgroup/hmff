@@ -1,0 +1,78 @@
+[06-May-2024 08:12:13 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:12:13 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:12:13 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:12:16 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:12:16 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:12:16 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:12:19 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:12:19 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:12:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:17:17 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:17:17 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:17:17 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:17:19 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:17:19 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:17:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:22:31 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:22:31 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:22:31 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:31:25 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:31:25 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:31:25 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:34:09 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:34:09 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:34:09 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:35:40 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:35:40 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:35:40 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:36:19 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:36:19 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:36:19 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:36:20 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:36:20 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:36:20 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:43:32 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:43:32 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:43:32 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:53:21 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:53:21 UTC] PHP Warning:  require(/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php): Failed to open stream: No such file or directory in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34
+[06-May-2024 08:53:21 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/hmacadem/hm.hmacademy.net/public/../vendor/autoload.php' (include_path='.:/opt/alt/php81/usr/share/pear:/opt/alt/php81/usr/share/php:/usr/share/pear:/usr/share/php') in /home/hmacadem/hm.hmacademy.net/public/index.php:34
+Stack trace:
+#0 {main}
+  thrown in /home/hmacadem/hm.hmacademy.net/public/index.php on line 34

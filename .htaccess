@@ -1,8 +1,8 @@
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteCond %{HTTP_HOST} palatialtours\.com [NC]
+RewriteCond %{HTTP_HOST} ^hm\.net [NC]
 RewriteCond %{SERVER_PORT} 80
-RewriteRule ^(.*)$ https://palatialtours.com/$1 [R,L]
+RewriteRule ^(.*)$ https://hmacademy.net/$1 [R,L]
 RewriteEngine On
 RewriteRule ^(.*)$ public/$1 [L]
 </IfModule>
