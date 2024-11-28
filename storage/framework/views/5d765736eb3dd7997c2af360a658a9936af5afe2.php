@@ -146,7 +146,9 @@
                     </div>
                 </nav>
             </div>
+             <a href="/mailing" class="nav-item nav-link">Contact2</a>
         </div>
+
     </div>
    
 
