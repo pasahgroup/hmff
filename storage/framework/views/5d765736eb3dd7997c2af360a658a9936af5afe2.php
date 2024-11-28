@@ -142,11 +142,12 @@
 
                                <a href="/aboutus" class="nav-item nav-link">About us</a>
                             <a href="/mailing" class="nav-item nav-link">Contact</a>
-                        </div>                      
+                        </div>  
+                         <a href="https://checkmaster.hmacademy.net" class="nav-item nav-link">Lodge Checklist</a>                    
                     </div>
                 </nav>
+                 
             </div>
-             <a href="/mailing" class="nav-item nav-link">Contact2</a>
         </div>
 
     </div>
