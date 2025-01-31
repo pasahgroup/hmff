@@ -1,6 +1,5 @@
-
-  @extends('admins.layouts.Apps.app')
-  @section('contents')
+  
+  <?php $__env->startSection('contents'); ?>
 
 
 <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
@@ -17,10 +16,10 @@
             <div class="col-md-1">
             </div>
             <div class="col-md-11 form-box">
-                <form method="POST" id="post_form" role="form" class="registration-form" action="{{ route('students.update',$datas->id) }}" enctype="multipart/form-data">
+                <form method="POST" id="post_form" role="form" class="registration-form" action="<?php echo e(route('students.update',$datas->id)); ?>" enctype="multipart/form-data">
 
                     <fieldset>
-                           @csrf
+                           <?php echo csrf_field(); ?>
                               <input type="hidden" name="_method" value="PUT">
                         <div class="form-top">
                             <div class="form-top-left">
@@ -32,12 +31,12 @@
                             <div class="row">
                                 <div class="form-group col-md-4 col-sm-6">
                                     <label>Addmission number</label>
-                                    <input type="text" class="form-control" placeholder="Addmission no" name="addmission_no" value="{{$datas->addmission_no}}">
+                                    <input type="text" class="form-control" placeholder="Addmission no" name="addmission_no" value="<?php echo e($datas->addmission_no); ?>">
                                 </div>
                                 <div class="form-group col-md-4 col-sm-6" >
                                     <label>Class</label>
                                 <select class="form-control" name="class">
-    <option>{{$datas->class}}</option>
+    <option><?php echo e($datas->class); ?></option>
                                     <option></option>
                                     <option>Vulnerable youth</option>
 
@@ -46,7 +45,7 @@
                                  <div class="form-group col-md-4 col-sm-6">
                                     <label>Session</label>
                                 <select class="form-control" name="session">
-                                   <option>{{$datas->session}}</option>
+                                   <option><?php echo e($datas->session); ?></option>
                                    <option></option>
                                     <option>March 2023</option>
                                     <option>June 2023</option>
@@ -57,15 +56,15 @@
                                <div class="row">
                                 <div class="form-group col-md-4 col-sm-6">
                                     <label>First name</label>
-                                    <input type="text" class="form-control" value="{{$datas->first_name}}" name="fname" >
+                                    <input type="text" class="form-control" value="<?php echo e($datas->first_name); ?>" name="fname" >
                                 </div>
                                 <div class="form-group col-md-4 col-sm-6">
                                     <label>Middle name</label>
-                                    <input type="text" class="form-control" value="{{$datas->middle_name}}" name="mname">
+                                    <input type="text" class="form-control" value="<?php echo e($datas->middle_name); ?>" name="mname">
                                 </div>
                                  <div class="form-group col-md-4 col-sm-6">
                                     <label>Last name</label>
-                                    <input type="text" class="form-control" value="{{$datas->last_name}}" name="lname">
+                                    <input type="text" class="form-control" value="<?php echo e($datas->last_name); ?>" name="lname">
                                 </div>
                             </div>
 
@@ -77,13 +76,13 @@
 
                                       <div class="form-group">
                                           <label>Birth date</label>
-                                <input type="date" class="form-control" name="birth_date" value="{{$datas->birth_date}}">
+                                <input type="date" class="form-control" name="birth_date" value="<?php echo e($datas->birth_date); ?>">
                             </div>
                         </div>
                                     <div class="form-group col-md-4 col-sm-4">
                                          <label>Gender</label>
                                         <select class="form-control" name="gender">
- <option>{{$datas->gender}}</option>
+ <option><?php echo e($datas->gender); ?></option>
                                              <option></option>
                                             <option>Male</option>
                                             <option>Female</option>
@@ -94,7 +93,7 @@
 
                                       <div class="form-group col-md-4 col-sm-4">
                                          <label>Mobile number</label>
-                                        <input type="text" class="form-control" value="{{$datas->mobile_no}}" name="mobile_no" required>
+                                        <input type="text" class="form-control" value="<?php echo e($datas->mobile_no); ?>" name="mobile_no" required>
                                     </div>
                                 </div>
                             </div>
@@ -107,13 +106,13 @@
 
                                       <div class="form-group">
                                        <label>Email</label>
-                                <input type="email" name="email" value="{{$datas->email}}" class="form-email form-control">
+                                <input type="email" name="email" value="<?php echo e($datas->email); ?>" class="form-email form-control">
                             </div>
                           </div>
                                     <div class="form-group col-md-4 col-sm-4">
                                          <label>Education level</label>
                                         <select class="form-control" name="education">
-                                          <option>{{$datas->education_level}}</option>
+                                          <option><?php echo e($datas->education_level); ?></option>
                                               <option value=""></option>
                                     <option>Standard seven</option>
                                     <option>Form IV</option>
@@ -134,7 +133,7 @@
 
                                       <div class="form-group">
                                        <label>Year</label>
-                                <input type="number" name="graduate" value="{{$datas->graduate}}" class="form-email form-control" name="graduate">
+                                <input type="number" name="graduate" value="<?php echo e($datas->graduate); ?>" class="form-email form-control" name="graduate">
                             </div>
                           </div>
 
@@ -142,7 +141,7 @@
                                       <div class="form-group col-md-2 col-sm-4">
                                          <label>Religion</label>
                                         <select class="form-control" name="religion">
-                                          <option>{{$datas->religion}}</option>
+                                          <option><?php echo e($datas->religion); ?></option>
                                             <option></option>
                                             <option>Christianity</option>
                                             <option>Islamic</option>
@@ -158,7 +157,7 @@
                                <div class="form-group col-md-4 col-sm-4">
                                 <label>Marital status</label>
                                         <select class="form-control" name="marital_status">
-                                          <option>{{$datas->marital_status}}</option>
+                                          <option><?php echo e($datas->marital_status); ?></option>
                                             <option></option>
                                             <option>Married</option>
                                             <option>Single</option>
@@ -167,7 +166,7 @@
                                 </div>
                                   <div class="form-group col-md-4 col-sm-4">
                                     <label>Number of children</label>
-                                    <input type="number" class="form-control" value="{{$datas->no_children}}" name="no_children">
+                                    <input type="number" class="form-control" value="<?php echo e($datas->no_children); ?>" name="no_children">
                                 </div>
 
 
@@ -175,7 +174,18 @@
 
 
    <div class="form-group col-md-4 col-sm-4">
-                                    <x-label for="password_confirmation" :value="__('Photo')" />
+                                    <?php if (isset($component)) { $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4 = $component; } ?>
+<?php $component = $__env->getContainer()->make(Illuminate\View\AnonymousComponent::class, ['view' => 'components.label','data' => ['for' => 'password_confirmation','value' => __('Photo')]]); ?>
+<?php $component->withName('label'); ?>
+<?php if ($component->shouldRender()): ?>
+<?php $__env->startComponent($component->resolveView(), $component->data()); ?>
+<?php $component->withAttributes(['for' => 'password_confirmation','value' => \Illuminate\View\Compilers\BladeCompiler::sanitizeComponentAttribute(__('Photo'))]); ?>
+<?php echo $__env->renderComponent(); ?>
+<?php endif; ?>
+<?php if (isset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4)): ?>
+<?php $component = $__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4; ?>
+<?php unset($__componentOriginalc254754b9d5db91d5165876f9d051922ca0066f4); ?>
+<?php endif; ?>
                                     <div class="form-group">
                                     <input type="file" name="attachment[]" onChange="displayImage(this)" id="attachment" accept="image/*" class="" style="display:block;">
 
@@ -184,7 +194,7 @@
             <span class="img-div float-right">
               <div class="text-center img-placeholder"  onClick="triggerClick()">
               </div>
-              <img src="{{ URL::asset('/storage/photos/'.$datas->photo) }}" onClick="triggerClick()" id="profileDisplay">
+              <img src="<?php echo e(URL::asset('/storage/photos/'.$datas->photo)); ?>" onClick="triggerClick()" id="profileDisplay">
             </span>
             </div>
 
@@ -208,34 +218,34 @@
                                  <div class="form-group col-md-4 col-sm-4">
                                          <label>Tribe</label>
                                         <select class="form-control" name="tribe">
-                                           <option>{{$datas->tribe}}</option>
+                                           <option><?php echo e($datas->tribe); ?></option>
                                             <option></option>
 
-  @foreach ($tribes as $tribe)
-  <option>{{$tribe->tribe}}</option>
- @endforeach
+  <?php $__currentLoopData = $tribes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $tribe): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+  <option><?php echo e($tribe->tribe); ?></option>
+ <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                     </div>
 
                                      <div class="form-group col-md-4 col-sm-4">
                                     <label>Place of origin</label>
-                                    <input type="text" class="form-control" value="{{$datas->place_origin}}" name="place_origin">
+                                    <input type="text" class="form-control" value="<?php echo e($datas->place_origin); ?>" name="place_origin">
                                 </div>
 
                                 <div class="form-group col-md-4 col-sm-4">
                                     <label>Current residence</label>
-                                    <input type="text" class="form-control" value="{{$datas->current_residence}}" name="current_residence">
+                                    <input type="text" class="form-control" value="<?php echo e($datas->current_residence); ?>" name="current_residence">
                                 </div>
 
                                  <div class="form-group col-md-6 col-sm-6">
                                          <label>Designation</label>
                                         <select class="form-control" name="designation" id="designation">
-                                           <option>{{$datas->designation}}</option>
+                                           <option><?php echo e($datas->designation); ?></option>
                                             <option></option>
 
-                                             @foreach ($designations as $designation)
-  <option>{{$designation->designation}}</option>
- @endforeach
+                                             <?php $__currentLoopData = $designations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $designation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+  <option><?php echo e($designation->designation); ?></option>
+ <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                     </div>
 
@@ -243,12 +253,12 @@
 <div class="form-group col-md-6 col-sm-6">
                                          <label>Assignee lodge</label>
                                         <select class="form-control" name="location" id="location">
-                                           <option>{{$datas->located}}</option>
+                                           <option><?php echo e($datas->located); ?></option>
                                             <option></option>
 
-                                             @foreach ($lodges as $lodge)
-  <option>{{$lodge->lodge_name}}</option>
- @endforeach
+                                             <?php $__currentLoopData = $lodges; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $lodge): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+  <option><?php echo e($lodge->lodge_name); ?></option>
+ <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                     </div>
 
@@ -269,7 +279,7 @@
                                  <div class="form-group col-md-4 col-sm-4">
                                        <label>Parental status</label>
                                 <select class="form-control" name="parental_status">
-                                   <option>{{$datas->parental_status}}</option>
+                                   <option><?php echo e($datas->parental_status); ?></option>
                                     <option></option>
                                     <option>Both alive</option>
                                     <option>Father</option>
@@ -282,7 +292,7 @@
 
                                       <div class="form-group">
                                      <label>Guardian name</label>
-                                <input type="text" value="{{$datas->gurdian_name}}" class="form-email form-control" name="gurdian_name">
+                                <input type="text" value="<?php echo e($datas->gurdian_name); ?>" class="form-email form-control" name="gurdian_name">
                             </div>
                           </div>
 
@@ -294,12 +304,12 @@
                                  <div class="form-group col-md-4 col-sm-4">
                                          <label>Relationship</label>
                                         <select class="form-control" name="relationship" id="relationship">
-                                           <option>{{$datas->relationship}}</option>
+                                           <option><?php echo e($datas->relationship); ?></option>
                                             <option></option>
 
-                                             @foreach ($relations as $relation)
-  <option>{{$relation->relation}}</option>
- @endforeach
+                                             <?php $__currentLoopData = $relations; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $relation): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+  <option><?php echo e($relation->relation); ?></option>
+ <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                         </select>
                                     </div>
 
@@ -307,7 +317,7 @@
                         <label>Mobile Number</label>
                                       <div class="form-group">
 
-                                <input type="text" value="{{$datas->guardian_mobile}}" class="" name="guardian_mobile">
+                                <input type="text" value="<?php echo e($datas->guardian_mobile); ?>" class="" name="guardian_mobile">
                             </div>
                           </div>
 
@@ -379,4 +389,6 @@
     </script>
 
     <script src="../../img_library/scripts.js" type="text/javascript"></script>
-      @endsection
+      <?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\hmacademy\resources\views/admins/students/edit-student.blade.php ENDPATH**/ ?>

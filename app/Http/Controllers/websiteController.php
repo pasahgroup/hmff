@@ -51,7 +51,7 @@ $detail = slider::where('id',$id)
  public function detail($id)
     {
 $detail = slider::where('id',$id)->first();
-        
+
 
 //dd($detail);
  return view('website.detailPage.detail',compact('detail'));
@@ -88,7 +88,7 @@ $detail = slider::where('id',$id)->first();
         ->where('attachments.type','Programs')
         ->groupby('attachments.destination_id')
         ->limit(3)->latest()->get();
-  
+
 
         $offers_group = specialOffer::join('programs','programs.id','special_offers.tour_id')
         ->join('attachments','attachments.destination_id','programs.id')
@@ -101,10 +101,10 @@ $detail = slider::where('id',$id)->first();
         ->where('attachments.type','Programs')
         ->groupby('attachments.destination_id')
         ->limit(3)->latest()->get();
-  
+
   $popular_safari = program::
   join('attachments','attachments.destination_id','programs.id')
- 
+
   ->select('programs.*','attachments.attachment')
   //->orwhere('programs.type','Wildlife Safaris')
  // ->orwhere('programs.type','Combined Tours')
@@ -122,9 +122,9 @@ $detail = slider::where('id',$id)->first();
   //->orwhere('programs.type','Combined Tours')
   //->orwhere('programs.type','Day Tours')
    ->whereIn('programs.type',array('Day Tours','Combined Tours','Wildlife Safaris'))
-   
+
   // ->whereNotIn('programs.id',array($popular_safari->id))//When Add limit for $popular_safari enable it
- 
+
   // ->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')
   // ->offset(1)
@@ -160,7 +160,7 @@ $detail = slider::where('id',$id)->first();
   ->where('attachments.type','Programs')
   // ->offset(1)
   ->limit(8)->get();
-  
+
    $popular_historical = program::join('attachments','attachments.destination_id','programs.id')
  ->select('programs.*','attachments.attachment')
   ->where('programs.type','Historical Site')
@@ -188,8 +188,8 @@ $detail = slider::where('id',$id)->first();
            ->where('programs.category','Private')
           ->where('itineraries.tour_addon','Programs')
           ->limit(6)->latest()->get();
-  
-         //Slider part         
+
+         //Slider part
           // $slidersf = slider::join('programs','programs.id','sliders.tour_id')
           // ->where('sliders.status','1')
           // ->select('sliders.*','programs.tour_name')
@@ -209,7 +209,7 @@ $detail = slider::where('id',$id)->first();
  $sliderCountFooter2 = slider::where('status','1')
  ->where('section','Footer2')
                   ->count();
-                  
+
  $sliderCountFooter3 = slider::where('status','1')
  ->where('section','Footer3')
                   ->count();
@@ -250,19 +250,11 @@ $slider1 = slider::where('section','slider1')
             ->offset(1)
            ->limit(8)->get();
 
-
-
-
-//dd($footer2_slider);
-
-
-
 $footer1 = slider::where('status','1')
                  ->where('section','footer1')
           //->select('sliders.*')
           // ->offset(1)
           ->limit(1)->first();
-
 
           $slider2 = slider::where('section','slider2')
                 ->where('status','1')
@@ -276,28 +268,12 @@ $footer1_slider = slider::where('status','1')
             ->offset(1)
            ->limit(8)->get();
 
-
-
-
       $footer3_slider = slider::where('status','1')
                  ->where('section','footer3')
           //->select('sliders.*')
             ->offset(1)
            ->limit(8)->get();
 
-//dd($footer1_slider);
-
- // $sliders = slider::where('status','1')
- //           ->where('section','Main slider')
- //          // ->select('sliders.*')
- //           ->offset(1)
- //          ->limit(8)->get();
-
-
-
-
-
-//dd($footer2);
 
 $footer3 = slider::where('status','1')
                  ->where('section','footer3')
@@ -306,24 +282,19 @@ $footer3 = slider::where('status','1')
           ->limit(1)->first();
 
 
-
            $sliders = slider::where('status','1')
            ->where('section','Main slider')
           // ->select('sliders.*')
            ->offset(1)
           ->limit(8)->get();
 
-  //dd($sliders);
-
           //  $slidersCount = slider::join('programs','programs.id','sliders.tour_id')
           //  ->where('sliders.status','1')
           // ->count();
-         
 
-          
          $quickLinkSliderCount=quicklink::where('slider','Yes')
          ->count();
-         $quickLinkSliders = quicklink::where('slider','Yes')         
+         $quickLinkSliders = quicklink::where('slider','Yes')
          ->get();
          $slidersCount=$quickLinkSliderCount;
         //  $slidersCount= $slidersCount + $quickLinkSliderCount;
@@ -338,7 +309,7 @@ $footer3 = slider::where('status','1')
 
            $welcome_message = quickLink::where('page_type','Welcome message')
               ->limit(1)->get();
-     
+
          $testimonies_one = Testimony::join('attachments','attachments.destination_id','testimonies.id')
         ->select('testimonies.*','attachments.attachment')
         ->where('attachments.type','Testimonies')
@@ -351,8 +322,8 @@ $footer3 = slider::where('status','1')
         ->where('testimonies.status','1')
         // ->offset(1)
         ->limit(8)->latest()->get();
-    
-       
+
+
      //Seach Engine
        // $seo = title::where('title','What We Offer')->first();
        $title = "HM Academy";
@@ -397,8 +368,6 @@ $footer3 = slider::where('status','1')
            $student_webs = student::select('first_name','last_name','class','session','photo')
            ->limit(12)->get();
 //dd($students);
-
-
 
          return view('website.home.index',compact('offers_private','student_webs','footer1','footer2','footer3','slider_first','slider1','slider2','sliderCount','offers_group','popular_safarif','popular_trekking','popular_trekkingf','popular_safari','popular_holiday','popular_holidayf','popular_historicalf','popular_historical','place_to_visit','sliders','slidersCount','testimonies','offers','welcome_message','datasLink','title','description','keywords','contacts','testimonies_one','quickLinkSliders','historical_first','historical','geographical_first','geographical','culture_first','culture','wildlife_first','wildlife','sliderCountFooter1','sliderCountFooter2','sliderCountFooter3','footer1_slider','footer2_slider','footer3_slider'));
     }
@@ -481,7 +450,7 @@ return view('website.vulnarable.vulnarable',compact('student_webs'));
     {
 
    $popularExperiences = program::
-  join('attachments','attachments.destination_id','programs.id') 
+  join('attachments','attachments.destination_id','programs.id')
   ->select('programs.*','attachments.attachment')
    ->where('programs.popular_experience','Yes')
   ->where('attachments.type','Programs')

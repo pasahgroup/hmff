@@ -1,6 +1,5 @@
-
-  @extends('admins.layouts.Apps.app')
-  @section('contents')
+  
+  <?php $__env->startSection('contents'); ?>
 
   <script type="text/javascript" src="../js/jquery.js"></script>
 <script type="text/javascript" src="../js/jquery311.min.js"></script>
@@ -21,13 +20,13 @@
             <h1>Student Page</h1>
           </div>
           <div class="col-sm-6">
-             @if(Auth::user()->role =='Admin')
+             <?php if(Auth::user()->role =='Admin'): ?>
             <ol class="breadcrumb float-sm-right">
-              <li class="breadcrumb-item active"><a href="{{ route('students.create') }}" class="btn btn-primary" >
+              <li class="breadcrumb-item active"><a href="<?php echo e(route('students.create')); ?>" class="btn btn-primary" >
               <i class="fas fa-plus"></i> Student
             </a></li>
             </ol>
-            @endif
+            <?php endif; ?>
           </div>
         </div>
       </div><!-- /.container-fluid -->
@@ -39,9 +38,9 @@
       <div class="card">
         <div class="card-header">
 
-          <form method="post" id="post_form" role="form" class="registration-form" action="{{ route('research') }}" enctype="multipart/form-data">
+          <form method="post" id="post_form" role="form" class="registration-form" action="<?php echo e(route('research')); ?>" enctype="multipart/form-data">
 
-      @csrf
+      <?php echo csrf_field(); ?>
              <input type="hidden" name="user_id" value="POST">
            <div class="row">
               <div class="form-group col-md-1 col-sm-1">
@@ -52,10 +51,10 @@
             <div class="form-bottom">
                                 <select class="form-control" name="classg" id="classg" required>
                                     <option></option>
-                                    <option selected style="background-color:yellow">{{$selected_class ?? ''}}</option>
-                                      @foreach ($classes as $class)
-  <option>{{$class->class}}</option>
-   @endforeach
+                                    <option selected style="background-color:yellow"><?php echo e($selected_class ?? ''); ?></option>
+                                      <?php $__currentLoopData = $classes; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $class): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+  <option><?php echo e($class->class); ?></option>
+   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </select>
 
                             </div>
@@ -67,10 +66,10 @@
             <div class="form-bottom">
                                 <select class="form-control" name="session" id="session" required>
                                   <option></option>
-                                    <option selected style="background-color:yellow">{{$selected_session ?? ''}}</option>
-                                      @foreach ($sessions as $session)
-  <option>{{$session->session}}</option>
-   @endforeach
+                                    <option selected style="background-color:yellow"><?php echo e($selected_session ?? ''); ?></option>
+                                      <?php $__currentLoopData = $sessions; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $session): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
+  <option><?php echo e($session->session); ?></option>
+   <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
                                 </select>
                             </div>
                             </div>
@@ -106,47 +105,47 @@
                   </tr>
                   </thead>
                   <tbody>
-                      @foreach ($datas as $data)
+                      <?php $__currentLoopData = $datas; $__env->addLoop($__currentLoopData); foreach($__currentLoopData as $data): $__env->incrementLoopIndices(); $loop = $__env->getLastLoop(); ?>
                   <tr>
-                    <td>{{ $data->id }}</td>
-                    <td>{{ $data->pin }}</td>
-                    <td>{{ $data->addmission_no }}</td>
-                    <td><a href="{{ route('inclusive.show',$data->id) }}">{{ $data->first_name }} {{ $data->middle_name }} {{ $data->last_name }}<inclusive.show></a></td>
-                                      <td><span class="badge"> {{ $data->mobile_no}}</span></td>
-                    <td><span class="badge"> {{ $data->gender }}</span></td>
-                    <td>{{ $data->birth_date }}</td>
-                    <td>{{ $data->education_level }}</td>
+                    <td><?php echo e($data->id); ?></td>
+                    <td><?php echo e($data->pin); ?></td>
+                    <td><?php echo e($data->addmission_no); ?></td>
+                    <td><a href="<?php echo e(route('inclusive.show',$data->id)); ?>"><?php echo e($data->first_name); ?> <?php echo e($data->middle_name); ?> <?php echo e($data->last_name); ?><inclusive.show></a></td>
+                                      <td><span class="badge"> <?php echo e($data->mobile_no); ?></span></td>
+                    <td><span class="badge"> <?php echo e($data->gender); ?></span></td>
+                    <td><?php echo e($data->birth_date); ?></td>
+                    <td><?php echo e($data->education_level); ?></td>
 
-                  <!--    <td>{{ $data->main }}</td>
-                     <td>{{ $data->tour_code }}</td> -->
-                      <td><div class="logo mr-auto"><img src="{{ URL::asset('/storage/photos/'.$data->photo) }}"  style="width:100px; height:90px;"></div></td>
-                       <td>{{ $data->parental_status }}</td>
-                   <td>{{ $data->session }}</td>
-  <td>{{ $data->location }}</td>
+                  <!--    <td><?php echo e($data->main); ?></td>
+                     <td><?php echo e($data->tour_code); ?></td> -->
+                      <td><div class="logo mr-auto"><img src="<?php echo e(URL::asset('/storage/photos/'.$data->photo)); ?>"  style="width:100px; height:90px;"></div></td>
+                       <td><?php echo e($data->parental_status); ?></td>
+                   <td><?php echo e($data->session); ?></td>
+  <td><?php echo e($data->location); ?></td>
                     <td>
 
-     <form method="GET" id="post_form" role="form" class="registration-form" action="{{ route('students.show',$data->id) }}" enctype="multipart/form-data">
+     <form method="GET" id="post_form" role="form" class="registration-form" action="<?php echo e(route('students.show',$data->id)); ?>" enctype="multipart/form-data">
 
-      @csrf
+      <?php echo csrf_field(); ?>
              <input type="hidden" name="user_id" value="PUT">
-             <input type="hidden" name="classgf" id="classgf" value="{{ $data->class }}">
-<input type="hidden" name="sessionf" id="sessionf" value="{{ $data->session }}">
+             <input type="hidden" name="classgf" id="classgf" value="<?php echo e($data->class); ?>">
+<input type="hidden" name="sessionf" id="sessionf" value="<?php echo e($data->session); ?>">
 
-<input type="hidden" name="searchf" id="searchf" value="{{ $search }}">
+<input type="hidden" name="searchf" id="searchf" value="<?php echo e($search); ?>">
 
 
 <button type="submit" role="button"><i class="fa fa-bars"></i></button>
 </form>
 
-  @if(Auth::user()->role =='Admin')
-                      <a role="button" href="{{ route('editStudent',$data->id) }}"><i class="fa fa-edit"></i></a>
-                      @endif
+  <?php if(Auth::user()->role =='Admin'): ?>
+                      <a role="button" href="<?php echo e(route('editStudent',$data->id)); ?>"><i class="fa fa-edit"></i></a>
+                      <?php endif; ?>
 
-                     <!--  <a role="button" href="/destroyf/{{$data->id}} " onclick="return confirm('Are you sure? You want to delete {{ $data->tour_name}}','Inclusive')"><i class="fa fa-trash red"></i></a> -->
+                     <!--  <a role="button" href="/destroyf/<?php echo e($data->id); ?> " onclick="return confirm('Are you sure? You want to delete <?php echo e($data->tour_name); ?>','Inclusive')"><i class="fa fa-trash red"></i></a> -->
 
                     </td>
                   </tr>
-                  @endforeach
+                  <?php endforeach; $__env->popLoop(); $loop = $__env->getLastLoop(); ?>
 
                   </tbody>
                   <tfoot>
@@ -253,4 +252,6 @@
          document.getElementById("data_display").style.display = "none";
   }
 </script>
-@endsection
+<?php $__env->stopSection(); ?>
+
+<?php echo $__env->make('admins.layouts.Apps.app', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH C:\xampp\htdocs\hmacademy\resources\views/admins/students/index.blade.php ENDPATH**/ ?>

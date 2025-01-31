@@ -10,7 +10,7 @@
  <link rel="stylesheet" href="../../css/mformf.css">
 
 <!------ Include the above in your HEAD tag ---------->
- 
+
     <div class="container">
         <div class="row">
             <div class="col-md-1">
@@ -23,7 +23,7 @@
                         <div class="form-top">
                             <div class="form-top-left">
                                 <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>Personal Information</h3>
-                                
+
                             </div>
                         </div>
                         <div class="form-bottom">
@@ -36,19 +36,19 @@
                                     <label>Class</label>
                                 <select class="form-control" name="class">
                                     <option></option>
-                                                                   @foreach ($classes as $class) 
+                                                                   @foreach ($classes as $class)
   <option>{{$class->class}}</option>
- @endforeach 
-                               
+ @endforeach
+
                                 </select>
                             </div>
                                  <div class="form-group col-md-4 col-sm-6">
                                     <label>Session</label>
                                 <select class="form-control" name="session">
                                      <option></option>
-                                                                @foreach ($sessions as $session) 
+                                                                @foreach ($sessions as $session)
   <option>{{$session->session}}</option>
- @endforeach 
+ @endforeach
                                 </select>
                             </div>
                             </div>
@@ -71,7 +71,7 @@
                             <div class="form-group" style="margin-bottom:3px;">
                                 <div class="row">
 
-         
+
                                <div class="form-group col-md-4 col-sm-4">
 
                                       <div class="form-group">
@@ -100,7 +100,7 @@
     <div class="" style="margin-bottom:3px;">
                                 <div class="row">
 
-         
+
                                <div class="form-group col-md-4 col-sm-4">
 
                                       <div class="form-group">
@@ -152,7 +152,7 @@
 <div class="row">
 
 
-   
+
 
                                 <div class="form-group col-md-4 col-sm-4">
                                 <label>Marital status</label>
@@ -166,9 +166,9 @@
                                   <div class="form-group col-md-4 col-sm-4">
                                     <label>Number of children</label>
                                     <input type="number" class="form-control" placeholder="0" name="no_children">
-                                </div>                               
-                                  
-                       
+                                </div>
+
+
 
 
 
@@ -177,12 +177,12 @@
  <div class="form-group col-md-4 col-sm-4">
                                     <x-label for="password_confirmation" :value="__('Photo')" />
                                     <div class="form-group">
-                                    <input type="file" name="attachment[]" onChange="displayImage(this)" id="attachment" accept="image/*" class="" style="display:block;"> 
-                                   
+                                    <input type="file" name="attachment[]" onChange="displayImage(this)" id="attachment" accept="image/*" class="" style="display:block;">
+
                                 </div>
-          
+
             <span class="img-div float-right">
-              <div class="text-center img-placeholder"  onClick="triggerClick()">               
+              <div class="text-center img-placeholder"  onClick="triggerClick()">
               </div>
               <img src="images/no.png" onClick="triggerClick()" id="profileDisplay">
             </span>
@@ -190,19 +190,19 @@
 
                         </div>
 
-                        
-                            
+
+
                             <button type="button" class="btn btn-next">Next</button>
                         </div>
                     </fieldset>
-                  
+
 
 
                     <fieldset>
                         <div class="form-top">
                             <div class="form-top-left">
                                 <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>Other Information</h3>
-                             
+
                             </div>
                         </div>
 
@@ -210,11 +210,11 @@
                                  <div class="form-group col-md-4 col-sm-4">
                                          <label>Tribe</label>
                                         <select class="form-control" name="tribe">
-                                            <option></option>                                           
-                                   
-  @foreach ($tribes as $tribe) 
+                                            <option></option>
+
+  @foreach ($tribes as $tribe)
   <option>{{$tribe->tribe}}</option>
- @endforeach 
+ @endforeach
                                         </select>
                                     </div>
 
@@ -234,33 +234,33 @@
                                         <select class="form-control" name="designation" id="designation">
                                             <option></option>
                                             <option>None</option>
-  @foreach ($designations as $designation) 
+  @foreach ($designations as $designation)
   <option>{{$designation->designation}}</option>
- @endforeach 
-              
+ @endforeach
+
                                         </select>
                                     </div>
 
 
    <div class="form-group col-md-6 col-sm-6">
                                          <label>Assignee lodge</label>
-                                        <select class="form-control" name="located" id="located">
+                                        <select class="form-control" name="location" id="location">
                                             <option></option>
                                             <option>None</option>
-  @foreach ($lodges as $lodge) 
+  @foreach ($lodges as $lodge)
   <option>{{$lodge->lodge_name}}</option>
- @endforeach 
-              
+ @endforeach
+
                                         </select>
                                     </div>
-                                
+
                             </div>
 
-                             
+
                              <div class="form-top">
                             <div class="form-top-left">
                                 <h3><span><i class="fa fa-calendar-check-o" aria-hidden="true"></i></span>Gurdian</h3>
-                             
+
                             </div>
                         </div>
 
@@ -287,8 +287,8 @@
                             </div>
                           </div>
 
-                                 
-                                
+
+
                             </div>
 
                               <div class="row">
@@ -296,23 +296,23 @@
                                          <label>Relationship</label>
                                         <select class="form-control" name="relationship" id="relationship">
                                             <option></option>
-              
-   @foreach ($relations as $relation) 
+
+   @foreach ($relations as $relation)
   <option>{{$relation->relation}}</option>
- @endforeach 
+ @endforeach
 
                                         </select>
                                     </div>
 
                       <div class="form-group col-md-4 col-sm-4">
                          <label>Mobile Number</label>
-                                      <div class="form-group">                                    
+                                      <div class="form-group">
                                 <input type="text" placeholder="gurdian mobile" class="" name="guardian_mobile">
                             </div>
                           </div>
 
-                               
-                                
+
+
                             </div>
 
                             <button type="button" class="previous btn-previous">Previous</button>
@@ -324,8 +324,8 @@
         </div>
     </div>
 
-    
-    <script type="text/javascript">        
+
+    <script type="text/javascript">
         $(document).ready(function () {
     $('.registration-form fieldset:first-child').fadeIn('slow');
 
@@ -375,7 +375,7 @@
         });
 
     });
-   
+
 });
     </script>
 

@@ -27,14 +27,14 @@ class student extends Model
         'graduate',
         'parental_status',
         'tribe',
-      
+
       'marital_status',
 'place_origin',
 'current_residence',
 'no_children',
 
         'designation',
-        'located',
+        'location',
         'gurdian_name',
         'relationship',
         'guardian_mobile',
@@ -43,7 +43,7 @@ class student extends Model
     ];
 
         public static function getAsset($n){
-   
+
       $value = DB::select('select id,session from sessions where class_name="'.$n.'" order by class_name');
 
 //dd($value);

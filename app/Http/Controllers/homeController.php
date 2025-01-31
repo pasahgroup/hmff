@@ -17,7 +17,6 @@ class homeController extends Controller
      */
     public function index()
     {
-        //
         $pages = page::get();
         return view('admins.pages.pages',compact('pages'));
     }
@@ -39,9 +38,9 @@ class homeController extends Controller
     }
 
 //Edit Widget
-  
+
     public function editWidget($id){
-       
+
        $widgets = widget::where('id',$id)
        ->first();
      //  dd($widgets);
@@ -55,7 +54,7 @@ class homeController extends Controller
          return view('admins.pages.widgetList',compact('widgets'));
     }
 
-    //main page 
+    //main page
     public function mainPage($id){
         $pages= page::whereid($id)->first();
         $widgets= pageWidget::join('widgets','widgets.id','page_widgets.widget_id')
@@ -86,9 +85,9 @@ class homeController extends Controller
         $widget = widget::UpdateOrCreate([
         'widget_name'=>request('widget_name')],
         ['widget_descriptions'=>request('widget_descriptions'),
-        'user_id'=>auth::id()            
+        'user_id'=>auth::id()
            ]);
-                  
+
            return redirect()->back()->with('success','Widget created successfully');
         }
         // Create new page
@@ -96,7 +95,7 @@ class homeController extends Controller
            $widget = page::UpdateOrCreate([
         'page_title'=>request('page_title')],
         ['widget_descriptions'=>request('widget_descriptions'),
-        'user_id'=>auth::id()            
+        'user_id'=>auth::id()
            ]);
 
 
@@ -145,7 +144,7 @@ class homeController extends Controller
      */
     public function show($id)
     {
-        
+
        $widgets=DB::select("select id,widget_name from widgets where id not in(select widget_id from page_widgets where page_id=$id)");
       // dd($widgets);
 
@@ -153,7 +152,7 @@ class homeController extends Controller
         $page_widgets = pageWidget::join('pages','page_widgets.page_id','pages.id')
         ->join('widgets','page_widgets.widget_id','widgets.id')
         ->where('page_widgets.page_id',$id)->get();
-        
+
           return view('admins.sections.section',compact('widgets','pages','id','page_widgets'));
     }
 
@@ -162,12 +161,12 @@ public function sectionNumber($n)
        dd($n);
         //dd(request(''))
        $widgets=DB::select("select id,widget_name from widgets where id not in(select widget_id from page_widgets where page_id=$id)");
-     
+
         $pages = page::whereid($id)->get();
         $page_widgets = pageWidget::join('pages','page_widgets.page_id','pages.id')
         ->join('widgets','page_widgets.widget_id','widgets.id')
         ->where('page_widgets.page_id',$id)->get();
-        
+
     return view('admins.sections.section',compact('widgets','pages','id','page_widgets'));
     }
 
@@ -177,18 +176,18 @@ public function section()
        // $id=10;
        // dd($id);
        // $widgets=DB::select("select id,widget_name from widgets where id not in(select widget_id from page_widgets where page_id=$id)");
-     
+
        // $pages = page::whereid($id)->get();
         // $page_widgets = pageWidget::join('pages','page_widgets.page_id','pages.id')
         // ->join('widgets','page_widgets.widget_id','widgets.id')
         // ->where('page_widgets.page_id',$id)->get();
-        
+
     return view('admins.pages.addPage');
     }
 
   //Page List
-      public function pageList($id){       
-     
+      public function pageList($id){
+
   $pages=page::get();
   //dd($pages);
         $widgets = pagewidget::join('widgets','page_widgets.widget_id','widgets.id')
@@ -200,7 +199,7 @@ public function section()
     }
 
 
- 
+
     /**
      * Show the form for editing the specified resource.
      *
@@ -255,7 +254,7 @@ public function section()
         $delete = pageWidget::where('page_id',$id)->first();
         if($delete->delete()){
             return redirect()->back()->with('success','Widget removed successfully');
-        }    
+        }
         else{
             return redirect()->back()->with('error','Widget not exists');
         }

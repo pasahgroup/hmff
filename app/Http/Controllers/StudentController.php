@@ -42,7 +42,7 @@ class StudentController extends Controller
     public function research(request $request)
     {
      //dd('search');
-     
+
      $search="sflag";
 
          $datas = student::where('class',request('classg'))
@@ -54,7 +54,7 @@ class StudentController extends Controller
                  ->get();
 
          //dd($sessions);
- 
+
  $selected_session=request('session');
  $selected_class=request('classg');
 
@@ -67,7 +67,7 @@ class StudentController extends Controller
     public function search(request $request,$x,$y)
     {
      //dd($x);
-     
+
      $search="sflag";
 
          $datas = student::where('class',$x)
@@ -79,7 +79,7 @@ class StudentController extends Controller
                  ->get();
 
          //dd($sessions);
- 
+
  $selected_session=request('session');
  $selected_class=request('classg');
 
@@ -118,11 +118,11 @@ $classes = classg::get();
      */
     public function store(Request $request)
     {
-      
+
 
            $pin=rand(10000,99999);
-    
-         
+
+
           $student =  student::UpdateOrCreate(
             [   'pin'=>$pin],
             [
@@ -132,7 +132,7 @@ $classes = classg::get();
                  'first_name'=>request('fname'),
                  'middle_name'=>request('mname'),
                  'last_name'=>request('lname'),
-              
+
                  'gender'=>request('gender'),
                  'birth_date'=>request('birth_date'),
                   'mobile_no'=>request('mobile_no'),
@@ -151,7 +151,7 @@ $classes = classg::get();
 
 
                  'designation'=>request('designation'),
- 'located'=>request('located'),
+ 'location'=>request('location'),
 
 'gurdian_name'=>request('gurdian_name'),
 'parental_status'=>request('parental_status'),
@@ -183,17 +183,17 @@ $classes = classg::get();
                      //upload the image
                      $path = $attached->storeAs('public/photos/', $imageToStore);
 
-       
+
            // $id = attachment::where('destination_id', '=', $program->id)
            //  ->where('type', $type)
            //  ->get()->first();
-     
-     //dd($imageToStore);      
+
+     //dd($imageToStore);
 //dd(request('attachment'));
 
           if(request('attachment') !=null)
             {
-      //dd('printintcxx');   
+      //dd('printintcxx');
 
              $toupdate = student::where('id',$student->id)
             // ->where('type', $type)
@@ -201,7 +201,7 @@ $classes = classg::get();
             'photo'=>$imageToStore
            ]);
 
-//dd('printin bnmn');   
+//dd('printin bnmn');
 
            }else
            {
@@ -211,13 +211,13 @@ $classes = classg::get();
               //   'attachment'=>$imageToStore,
               //   'type'=> $type
               //   ]
-              //   );   
+              //   );
 
-              dd('no photo');      
+              dd('no photo');
          }
         }
       }
-       
+
    return redirect()->route('students.index')->with('success','Created successfuly');
 
     }
@@ -237,8 +237,8 @@ $classes = classg::get();
     {
      //dd($id);
 
-       $datas = student::where('id', $id)->first();  
-        $tribes = tribe::orderBy('tribe', 'asc')->get(); 
+       $datas = student::where('id', $id)->first();
+        $tribes = tribe::orderBy('tribe', 'asc')->get();
        $lodges = lodge::orderBy('lodge_name', 'asc')->get();
 
         $relations = relation::orderBy('relation', 'asc')->get();
@@ -265,7 +265,7 @@ $classes = classg::get();
          ->get();
 
 
-         return view('admins.students.user-details',compact('student','search','datas'));    
+         return view('admins.students.user-details',compact('student','search','datas'));
     }
 
 
@@ -290,10 +290,10 @@ $classes = classg::get();
      */
     public function update($id)
     {
-        
+
 //dd('print');
 
-         
+
           $studentUpdate =  student::UpdateOrCreate(
             [   'id'=>$id],
             [
@@ -303,7 +303,7 @@ $classes = classg::get();
                  'first_name'=>request('fname'),
                  'middle_name'=>request('mname'),
                  'last_name'=>request('lname'),
-              
+
                  'gender'=>request('gender'),
                  'birth_date'=>request('birth_date'),
                   'mobile_no'=>request('mobile_no'),
@@ -322,12 +322,11 @@ $classes = classg::get();
 
 
   'designation'=>request('designation'),
- 'located'=>request('located'),
+ 'location'=>request('location'),
 
 'gurdian_name'=>request('gurdian_name'),
 'parental_status'=>request('parental_status'),
 'relationship'=>request('relationship'),
-
 
 
 'guardian_mobile'=>request('guardian_mobile'),
@@ -357,7 +356,7 @@ $classes = classg::get();
 
           if(request('attachment') !=null)
             {
-      //dd('printintcxx');   
+      //dd('printintcxx');
 
              $toupdate = student::where('id',$studentUpdate->id)
             // ->where('type', $type)
@@ -367,7 +366,7 @@ $classes = classg::get();
            }
         }
       }
-       
+
    return redirect()->route('students.index')->with('success','Created successfuly');
     }
 

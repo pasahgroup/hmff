@@ -29,7 +29,7 @@
 
      <link href="../slider_header/style_slider.css" rel="stylesheet">
 </head>
-   
+
 <body>
     <!-- Topbar Start -->
     <div class="container-fluid">
@@ -84,17 +84,17 @@
                     <span class="h3 text-uppercase text-dark bg-primary2 px-2 ml-n1" style="background-color:red">Academy</span>
                 </a>
             </div>
-            <div class="col-lg-5 col-6 text-left">                          
-                            
-                              
-                                <div class="overflow-hidden" style="width: 735px;">                                 
+            <div class="col-lg-5 col-6 text-left">
+
+
+                                <div class="overflow-hidden" style="width: 735px;">
                                 <div id="note" class="ps-2">
-                                   @foreach ($students as $student)   
+                                   @foreach ($students as $student)
                                     <img src="{{ URL::asset('/storage/photos/'.$student->photo) }}" class="img-fluid rounded-circle border border-3 border-primary me-2" style="width: 30px; height: 30px;" alt="">
                                     <a href="#"><p class="text-white mb-0 link-hover"></p></a>
-                                @endforeach  
-                                </div>                                   
-                            </div> 
+                                @endforeach
+                                </div>
+                            </div>
 
 
             </div>
@@ -107,7 +107,7 @@
 
 
       <div class="container-fluid bg-dark mb-30">
-        <div class="row px-xl-5">           
+        <div class="row px-xl-5">
             <div class="col-lg-9">
                 <nav class="navbar navbar-expand-lg bg-dark navbar-dark py-3 py-lg-0 px-0">
                     <a href="" class="text-decoration-none d-block d-lg-none">
@@ -120,7 +120,7 @@
                     <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                         <div class="navbar-nav mr-auto py-0">
                             <a href="/" class="nav-item nav-link active">Home</a>
-                         
+
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Vulnarable<i class="fa fa-angle-down mt-1"></i></a>
                                 <div class="dropdown-menu bg-primary rounded-0 border-0 m-0">
@@ -142,16 +142,16 @@
 
                                <a href="/aboutus" class="nav-item nav-link">About us</a>
                             <a href="/mailing" class="nav-item nav-link">Contact</a>
-                        </div>  
-                         <a href="https://checkmaster.hmacademy.net" class="nav-item nav-link">Lodge Checklist System</a>                    
+                        </div>
+                         <a href="https://lodgechecklist.com" class="nav-item nav-link">Lodge Checklist</a>
                     </div>
                 </nav>
-                 
+
             </div>
         </div>
 
     </div>
-   
+
 
     <!-- Navbar End -->
  @yield('content')
@@ -160,10 +160,10 @@
     <!-- Footer Start -->
     <div class="container-fluid bg-dark text-secondary mt-5 pt-5">
         <div class="row px-xl-5 pt-5">
-         
+
             <div class="col-lg-8 col-md-12">
                 <div class="row">
-                   
+
                     <div class="col-md-4 mb-5">
                         <h5 class="text-secondary text-uppercase mb-4">Pages</h5>
                         <div class="d-flex flex-column justify-content-start">
@@ -194,7 +194,7 @@
                        <form method="POST" id="post_form" role="form" class="registration-form" action="{{ route('subscribe.store') }}" enctype="multipart/form-data">
 
       @csrf
-                          
+
                             <div class="input-group">
                                 <input type="email" class="form-control" name="email" id="email" placeholder="email">
                                 <div class="input-group-append">
@@ -215,7 +215,7 @@
 
                <div class="col-lg-4 col-md-12 mb-5 pr-3 pr-xl-5">
                 <h5 class="text-secondary text-uppercase mb-4">Contact</h5>
-                
+
                 <p class="mb-2"><i class="fa fa-map-marker-alt text-primary mr-3"></i>@isset($contact->address){{$contact->address}} @endisset</p>
                 <p class="mb-2"><i class="fa fa-envelope text-primary mr-3"></i>@isset($contact->email){{$contact->email}} @endisset</p>
                 <p class="mb-0"><i class="fa fa-phone-alt text-primary mr-3"></i>@isset($contact->phone){{$contact->phone}} @endisset</p>
@@ -243,7 +243,7 @@
     <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
     <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script> -->
    <script src="../website/lib/bootstrap.bundle.min.js"></script>
-    
+
     <script src="../website/lib/easing/easing.min.js"></script>
     <script src="../website/lib/owlcarousel/owl.carousel.min.js"></script>
 
