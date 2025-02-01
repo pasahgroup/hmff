@@ -38,15 +38,13 @@ $enquiries=enquiry::where('status','Active')->count();
          ->where('tour_equiry_forms.status','Active')
         ->where('tour_equiry_forms.tour_type','Group')
         ->count();
-
-        
     $trainees=lodgetrainee::count();
-        
-        $students=student::count();
-            $lodges=lodge::count();
 
-//dd($trainee);
-        return view('admins.Dashboard.index',compact('agents','lodges','students','trainees','tailorMades','customers','partiners','tourGuides','contacts','enquiries','activeGroupTrip'));
+        $students_data=student::count();
+        $lodges=lodge::count();
+
+//dd($students_data);
+        return view('admins.Dashboard.index',compact('agents','lodges','students_data','trainees','tailorMades','customers','partiners','tourGuides','contacts','enquiries','activeGroupTrip'));
     }
 
     /**
