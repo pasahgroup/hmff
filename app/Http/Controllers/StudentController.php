@@ -7,7 +7,7 @@ use App\Models\tribe;
 use App\Models\lodge;
 use App\Models\relation;
 use App\Models\classg;
-use App\Models\session;
+use App\Models\tsession;
 use App\Models\designation;
 
 use App\Http\Requests\StorestudentRequest;
@@ -32,10 +32,9 @@ class StudentController extends Controller
 
   //$classes = classg::where('class',request('classg'))
           //->get();
-           $sessions = session::where('class_name',request('classg'))
+           $sessions = tsession::where('class_name',request('classg'))
                  ->get();
-         // dd($classes);
-             return view('admins.students.index',compact('datas','sessions','search','classes'));
+                     return view('admins.students.index',compact('datas','sessions','search','classes'));
     }
 
 
@@ -49,7 +48,7 @@ class StudentController extends Controller
          ->where('session',request('session'))
          ->get();
 
-          $sessions = session::where('class_name',request('classg'))
+          $sessions = tsession::where('class_name',request('classg'))
                    ->where('session','!=',request('session'))
                  ->get();
 
@@ -74,7 +73,7 @@ class StudentController extends Controller
          ->where('session',$y)
          ->get();
 
-          $sessions = session::where('class_name',request('classg'))
+          $sessions = tsession::where('class_name',request('classg'))
                    ->where('session','!=',request('session'))
                  ->get();
 
@@ -105,7 +104,7 @@ class StudentController extends Controller
 
 
 $classes = classg::get();
-  $sessions = session::get();
+  $sessions = tsession::get();
         //dd($designations);
           return view('admins.students.add',compact('tribes','lodges','classes','sessions','relations','designations'));
     }

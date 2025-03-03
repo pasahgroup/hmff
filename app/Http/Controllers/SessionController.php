@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\session;
+use App\Models\tsession;
 use App\Models\classg;
 
 use App\Http\Requests\StoresessionRequest;
@@ -11,10 +11,10 @@ use App\Http\Requests\UpdatesessionRequest;
 use Illuminate\Http\Request;
 class SessionController extends Controller
 {
-    
+
     public function index()
     {
-         $sessions = session::orderBy('session', 'asc')->get();
+         $sessions = tsession::orderBy('session', 'asc')->get();
         return view('admins.sessions.session-list',compact('sessions'));
     }
 
@@ -44,11 +44,11 @@ class SessionController extends Controller
     public function store(Request $request)
     {
          if (request('session')) {
-        $class = session::UpdateOrCreate([
+        $class = tsession::UpdateOrCreate([
         'class_name'=>request('class_name'),
-        'session'=>request('session_name')        
+        'session'=>request('session_name')
            ]);
-                  
+
            return redirect()->back()->with('success','Session recorded successfully');
         }
 
@@ -58,10 +58,10 @@ class SessionController extends Controller
 
 
      public function editSession ($id){
-       
-       $sessions = session::where('id',$id)
+
+       $sessions = tsession::where('id',$id)
        ->first();
-      
+
          $classes = classg::orderBy('class', 'asc')->get();
 //dd($classes);
          return view('admins.sessions.edit-session',compact('sessions','classes'));
@@ -75,7 +75,7 @@ class SessionController extends Controller
      */
     public function show(session $classg)
         {
-   
+
     }
 
     /**
@@ -99,8 +99,8 @@ class SessionController extends Controller
 
   public function update(Request $request,$id)
     {
-  
-      $toupdate = session::where('id',$id)
+
+      $toupdate = tsession::where('id',$id)
                ->update([
            'class_name'=>request('class_name'),
             'session'=>request('session_name')
@@ -116,10 +116,10 @@ class SessionController extends Controller
      */
       public function destroy($id)
     {
-     $delete = session::where('id',$id)->first();
+     $delete = tsession::where('id',$id)->first();
         if($delete->delete()){
             return redirect()->route('session.index')->with('success','Session removed successfully');
-        }    
+        }
         else{
             return redirect()->route('session.index')->with('error','Session not exists');
         }
