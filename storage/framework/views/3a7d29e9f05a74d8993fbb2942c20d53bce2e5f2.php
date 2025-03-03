@@ -189,8 +189,6 @@
       $('#classg').change(function(){
          // ward
 
-
-
          var v = $(this).val();
               //  alert(v);
            // Empty the dropdown

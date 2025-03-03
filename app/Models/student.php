@@ -44,7 +44,7 @@ class student extends Model
 
         public static function getAsset($n){
 
-      $value = DB::select('select id,session from sessions where class_name="'.$n.'" order by class_name');
+      $value = DB::select('select id,session from tsessions where class_name="'.$n.'" order by class_name');
 
 //dd($value);
       return $value;

@@ -34,6 +34,8 @@ class StudentController extends Controller
           //->get();
            $sessions = tsession::where('class_name',request('classg'))
                  ->get();
+                //$sessions = tsession::get();
+                 //dd(request('classg'));
                      return view('admins.students.index',compact('datas','sessions','search','classes'));
     }
 
@@ -52,7 +54,7 @@ class StudentController extends Controller
                    ->where('session','!=',request('session'))
                  ->get();
 
-         //dd($sessions);
+        //dd($sessions);
 
  $selected_session=request('session');
  $selected_class=request('classg');
