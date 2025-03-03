@@ -35,7 +35,7 @@
             </a>
 
             <a href="/trainee" class="btn btn-default" >
-             <i class="fas fa-plus"></i>Trainees(<b class="red">{{$trainees}}</b>)
+             <i class="fas fa-plus"></i>Trainees(<b class="red">{{$trainees}} nm</b>)
            </a>
           </div>
         </div>
